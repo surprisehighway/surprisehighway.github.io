@@ -4,7 +4,7 @@
 
 // Paths
 var http_path = '',
-    asset_path = http_path + '/assets',
+    asset_path = http_path + 'assets',
     css_dir = asset_path + '/css',
     sass_dir = asset_path + '/sass',
     images_dir = asset_path + '/img',
