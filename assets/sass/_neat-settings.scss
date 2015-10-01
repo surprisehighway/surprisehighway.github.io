@@ -1,0 +1,10 @@
+$disable-warnings: true !global;
+
+/* Type defaults */
+$font-size-base: 18px !global;
+$line-height-base: 1.5;
+
+/* Neat Grid */
+$em-base: $font-size-base !global;
+$max-width: em(1170px) !global;
+// $visual-grid: true !global;
