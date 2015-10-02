@@ -1,0 +1,22 @@
+/*
+	Article Content
+*/
+
+main {
+	h1.headline {
+		text-align: center;
+		padding: 2rem 0;
+		margin-bottom: 1rem;
+		border-bottom: 1px solid $hairline-light;
+	}
+}
+
+article {
+
+	h1 { font-size: 2.6em; }
+	h2 { font-size: 1.3em; }
+	h3 { font-size: 1.4em; font-weight: 400; }
+	h4 {}
+	h5 {}
+
+}

@@ -1,0 +1,32 @@
+/*
+	Site layout
+*/
+
+nav.fixed {
+	@include position(fixed, 0 null null 0);
+	height: 100%;
+	overflow: auto;
+	width: em(320px);
+}
+
+main {
+	@include calc(width, "100% - #{em(320px)}");
+    height: 100%;
+    margin-left: 320px;
+    margin-right: auto;
+    *zoom: 1;
+
+     &:before, &:after {
+       content: " ";
+       display: table;
+     }
+
+     &:after {
+       clear: both;
+     }
+}
+
+article {
+	@include span-columns(6);
+	@include shift(3);
+}

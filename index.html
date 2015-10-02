@@ -3,37 +3,70 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Base Front-End<?php if (isset($title)) echo ' | ' . $title; ?></title>
-		<meta name="description" content="<?php if (isset($description)) echo $description; ?>">
+		<title>Surprise Highway - Docs</title>
+		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-		<link rel="stylesheet" href="/assets/css/styles.css">
+		<!-- Fonts -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+		<!-- Styles -->
+		<link rel="stylesheet" href="/assets/css/styles.min.css">
 		<!--[if lt IE 9]><script src="/assets/components/html5-shiv/dist/html5shiv.js"></script><![endif]-->
 		<script src="/assets/components/modernizr/modernizr.js"></script>
 	</head>
 	<body>
 
-		<header class="site-header" role="banner">
-			<!-- Site header goes here -->
-		</header>
+		<nav class="fixed">
+		  <a href="/"><h1 class="logo">Surprise Highway - Docs</h1></a>
+		  <ul class="list">
+		    <li class="title"><a href="#"><h3>Section Headline</h3></a></li>
+		    <li><a href="#id" class="">Entry Heading</a></li>
+		    <li><a href="#id" class="">Entry Heading</a></li>
+		    <li><a href="#id" class="">Entry Heading</a></li>
+		  </ul>
+		</nav><!-- /nav -->
 
-		<div class="main" role="main">
+		<main>
+			<header class="site-header" role="banner">
+				<!-- Site header goes here -->
+			</header>
 
-			<div class="container" style="padding-top:30px;padding-bottom:30px;">
-				<h1>surprisehighway.github.io</h1>
-			</div>
+			<h1 id="mixins" class="headline">Section Headline</h1>
+			<section>
+				<article class="type-system-serif">
+				  <h1>Entry Heading</h1>
+				  <p class="type">Type, JS, CSS</p>
+				  <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, perferendis! Odit quisquam <code>code block</code> dicta illum ipsa quod natus iure aliquid necessitatibus veritatis, itaque magnam aliquam, dolorum nostrum nemo, explicabo perspiciatis nobis!</h2>
+				  <code>incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</code>
 
-		</div> <!-- .main -->
+				  <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
 
-		<footer class="site-footer" role="content-info">
-			<!-- Site footer here -->
-		</footer>
+
+				  </p>
+
+				  <h3>Subheading lorem</h3>
+				  <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
+				  <hr>
+				  <p class="author">Author Name</p>
+				  <div>
+				  	<a href="#"><i class="fa fa-github"></i> Git Hub</a>
+				  	<a href="#"><i class="fa fa-github-alt"></i> Gist </a>
+				  	<a href="#"><i class="fa fa-external-link-square"></i> Homepage </a>
+				  </div>
+				</article>
+			</section>
+
+
+
+			<footer class="site-footer" role="content-info">
+				<!-- Site footer here -->
+			</footer>
+		</main> <!-- /main -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="/assets/components/jquery/jquery.min.js"><\/script>')</script>
 		<script src="/assets/js/build/site.js"></script>
-
-		<?php if(isset($additional_scripts)) echo $additional_scripts; ?>
 
 		<script>
 			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

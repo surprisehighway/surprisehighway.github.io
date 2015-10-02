@@ -22,10 +22,8 @@
 @import "grid";
 
 //component modules
-@import "modules/buttons";
-@import "modules/forms";
-@import "modules/header";
-@import "modules/footer";
+@import "modules/layout";
+@import "modules/nav";
+@import "modules/article";
 
 //page modules
-@import "modules/styleguide";
