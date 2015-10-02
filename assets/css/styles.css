@@ -922,11 +922,15 @@ samp {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
 
 code {
-  padding: 2px 4px;
+  padding: 0.2rem 0.4rem;
   font-size: 90%;
-  color: #c7254e;
-  background-color: #f9f2f4;
+  color: #ffb6c1;
+  background-color: #1c1c1c;
   border-radius: 4px; }
+  code.block {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 1em 0 30px; }
 
 kbd {
   padding: 2px 4px;
@@ -1436,10 +1440,29 @@ article {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 48.82117%;
-  margin-left: 25.58941%; }
+  width: 100%;
+  padding: 0 20px; }
   article:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 992px) {
+    article {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%;
+      margin-left: 8.5298%;
+      padding: 0; }
+      article:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 1200px) {
+    article {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-left: 25.58941%; }
+      article:last-child {
+        margin-right: 0; } }
 
 /*
 	Site nav
@@ -1466,17 +1489,32 @@ nav.fixed {
 	Article Content
 */
 main h1.headline {
+  display: block;
   text-align: center;
   padding: 2rem 0;
   margin-bottom: 1rem;
   border-bottom: 1px solid #e5e5e5; }
+  main h1.headline::after {
+    clear: both;
+    content: "";
+    display: table; }
 
-article h1 {
-  font-size: 2.6em; }
-
-article h2 {
-  font-size: 1.3em; }
-
-article h3 {
-  font-size: 1.4em;
-  font-weight: 400; }
+article {
+  margin-bottom: 5rem; }
+  article h1 {
+    font-size: 2.6em; }
+  article h2 {
+    font-size: 1.3em; }
+  article h3 {
+    font-size: 1.4em;
+    font-weight: 400; }
+  article .links {
+    margin-bottom: 0.5em; }
+    article .links a:after {
+      content: '\7C';
+      margin: 0 10px;
+      color: #919191; }
+    article .links a:last-child:after {
+      content: none; }
+  article .details p {
+    margin-bottom: 0.125em; }

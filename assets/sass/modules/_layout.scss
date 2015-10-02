@@ -11,22 +11,33 @@ nav.fixed {
 
 main {
 	@include calc(width, "100% - #{em(320px)}");
-    height: 100%;
-    margin-left: 320px;
-    margin-right: auto;
-    *zoom: 1;
+	height: 100%;
+	margin-left: 320px;
+	margin-right: auto;
+	*zoom: 1;
 
-     &:before, &:after {
-       content: " ";
-       display: table;
-     }
+		&:before, &:after {
+			content: " ";
+			display: table;
+		}
 
-     &:after {
-       clear: both;
-     }
+		&:after {
+			clear: both;
+		}
 }
 
 article {
-	@include span-columns(6);
-	@include shift(3);
+	@include span-columns(12);
+	padding: 0 20px;
+
+	@include media($medium) {
+		@include span-columns(10);
+		@include shift(1);
+		padding: 0;
+	}
+
+	@include media($large) {
+		@include span-columns(6);
+		@include shift(3);
+	}
 }

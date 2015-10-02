@@ -546,12 +546,18 @@ samp {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 code {
-  padding: 2px 4px;
+  padding: 0.2rem 0.4rem;
   font-size: 90%;
-  color: #c7254e;
-  background-color: #f9f2f4;
+  color: #ffb6c1;
+  background-color: #1c1c1c;
   border-radius: 4px;
+  &.block {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 1em 0 30px;
+  }
 }
+
 kbd {
   padding: 2px 4px;
   font-size: 90%;
