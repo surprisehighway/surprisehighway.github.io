@@ -1,0 +1,34 @@
+<nav class="fixed">
+  <a href="/"><h1 class="logo">SurpriseHighway.github.io</h1></a>
+  <h2>{{page.title}}</h2>
+  <ul class="list">
+
+    {% comment %}
+      Assign the collection, grouped by category and alpha sorted.
+      @var `page.category` is defined in the index.html front matter.
+    {% endcomment %}
+
+    {% case page.category %}
+    {% when "frontend" %}
+      {% assign collectionByCategory = site.frontend | group_by:"category" | sort: "title" %}
+    {% when "cms" %}
+      {% assign collectionByCategory = site.cms | group_by:"category" | sort: "title" %}
+    {% when "developer-environments" %}
+      {% assign collectionByCategory = site.developer-environments | group_by:"category" | sort: "title" %}
+    {% endcase %}
+
+
+    {% for category in collectionByCategory %}
+      <li class="title">
+        <a href="#{{ category.name | slugify }}">
+          <h3>{{ category.name | capitalize }}</h3>
+        </a>
+      </li>
+
+      {% for item in category.items %}
+        <li><a href="#{{item.title | slugify }}">{{item.title}}</a></li>
+      {%endfor%}
+
+    {% endfor %}
+  </ul>
+</nav><!-- /nav -->

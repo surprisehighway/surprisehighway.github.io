@@ -1,11 +1,12 @@
 {% include head-tags.html %}
 
-{% include nav.html %}
+{% if page.url == "/index.html" %}
+   {% include nav.html %}
+{% else %}
+   {% include collection-nav.html %}
+{% endif %}
 
     <main>
-      <header class="site-header" role="banner">
-        <!-- Site header goes here -->
-      </header>
 
       {{ content }}
 

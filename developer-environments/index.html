@@ -1,0 +1,45 @@
+---
+layout: default
+title: "Developer Environments"
+category: "developer-environments"
+---
+
+{% assign frontendByCategory = site.developer-environments | group_by:"category" | sort: "title" %}
+{% for category in frontendByCategory %}
+  <h1 id="{{ category.name | slugify }}" class="headline">{{ category.name | capitalize }}</h1>
+  {% for item in category.items %}
+  <section>
+    <div class="row">
+      <article id="{{ item.title | slugify }}">
+        <h1>{{item.title}}</h1>
+        <p class="type">{{item.type}}</p>
+        {{item.content}}
+        <hr>
+        <div class="details">
+          {% if item.links %}
+            <div class="links">
+              {% for link in item.links %}
+                {% case link.type %}
+                {% when "github" or "git hub" %}
+                  <a href="{{link.url}}"><i class="fa fa-github"></i> Git Hub</a>
+                {% when "gist" %}
+                  <a href="{{link.url}}"><i class="fa fa-github-alt"></i> Gist </a>
+                {% else %}
+                  <a href="{{link.url}}"><i class="fa fa-external-link-square"></i> {{link.url}}</a>
+                {% endcase %}
+
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          {% if item.bower %}
+          <p>Install with bower:</p>
+          <code class="bower">{{item.bower}}</code>
+          {% endif %}
+        </div>
+      </article>
+    </div>
+  </section>
+
+  {%endfor%}
+{% endfor %}

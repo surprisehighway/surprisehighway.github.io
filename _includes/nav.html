@@ -1,19 +1,20 @@
 <nav class="fixed">
-  <a href="/"><h1 class="logo">Surprise Highway - Docs</h1></a>
+  <a href="/"><h1 class="logo">SurpriseHighway.github.io</h1></a>
   <ul class="list">
-
-    {% assign frontendByCategory = site.frontend | group_by:"category" | sort: "title" %}
-    {% for category in frontendByCategory %}
       <li class="title">
-        <a href="#{{ category.name | slugify }}">
-          <h3>{{ category.name | capitalize }}</h3>
+        <a href="/cms">
+          <h3>CMS</h3>
         </a>
       </li>
-
-      {% for item in category.items %}
-        <li><a href="#{{item.title | slugify }}">{{item.title}}</a></li>
-      {%endfor%}
-
-    {% endfor %}
+      <li class="title">
+        <a href="/frontend">
+          <h3>Frontend</h3>
+        </a>
+      </li>
+      <li class="title">
+        <a href="/developer-environments">
+          <h3>Developer Environments</h3>
+        </a>
+      </li>
   </ul>
 </nav><!-- /nav -->
