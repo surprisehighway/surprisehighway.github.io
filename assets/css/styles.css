@@ -921,17 +921,6 @@ pre,
 samp {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
 
-code {
-  padding: 0.2rem 0.4rem;
-  font-size: 90%;
-  color: #ffb6c1;
-  background-color: #1c1c1c;
-  border-radius: 4px; }
-  code.block {
-    display: inline-block;
-    padding: 8px 15px;
-    margin: 1em 0 30px; }
-
 kbd {
   padding: 2px 4px;
   font-size: 90%;
@@ -1504,10 +1493,30 @@ article {
   article h1 {
     font-size: 2.6em; }
   article h2 {
-    font-size: 1.3em; }
+    font-size: 1.3em;
+    margin-bottom: 30px; }
   article h3 {
     font-size: 1.4em;
     font-weight: 400; }
+  article code {
+    padding: 0.2rem 0.4rem;
+    font-size: 90%;
+    color: #ffb6c1;
+    background-color: #1c1c1c;
+    border-radius: 4px; }
+    article code.block {
+      display: inline-block;
+      padding: 8px 15px;
+      margin-bottom: 30px; }
+  article .highlight pre {
+    width: 100%;
+    font-size: 100%;
+    padding: 8px 15px;
+    margin-bottom: 30px;
+    color: #ffb6c1;
+    background-color: #1c1c1c;
+    border-radius: 4px;
+    display: inline-block; }
   article .links {
     margin-bottom: 0.5em; }
     article .links a:after {
